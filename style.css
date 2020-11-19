@@ -1,0 +1,105 @@
+/* add a gradient background to the whole page */
+body {
+    background: rgb(27,166,182);
+    background: linear-gradient(90deg, rgba(27,166,182,1) 0%, rgba(251,227,176,1) 97%);
+}
+
+/* bring down the whole list */
+.container-div {
+    margin-top: 100px;
+}
+
+/* style the list header */
+.list-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    height: 50px;
+    font-size: x-large;
+    padding: 0px 10px 0px 10px;
+}
+
+.header-div {
+    text-align: center;
+}
+
+/* style the list header title */
+#todo-header {
+    font-weight: 450;
+}
+
+/* style the list items wrapper */
+ul.list-group {
+    border-radius: 0%;
+}
+
+/* style the list item */
+li.list-item {
+    padding: 0px 0px;
+    border: 0px;
+    height: 40px;
+    overflow:hidden;
+    position:relative;
+}
+
+li.list-item:hover {
+    background: rgb(228, 228, 228);
+}
+
+/* set visibility on Delete button on hover */
+li.list-item:hover > span.btn {
+    display: inline-block;
+    left: -40px;
+    animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+/* add a line-through if it contains a class 'checked' */
+li div.list-text.checked {
+    text-decoration: line-through;
+    color: rgb(134, 134, 134);
+  }
+
+/* style the Delete button */
+li > span.btn {
+    display: none;
+    background-color: red;
+    border-radius: 0%;
+    height: 40px;
+    width: 40px;
+    padding-top: 10px;
+    top: 0px;
+}
+
+
+div.list-text {
+    padding-top: 8px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* style the input new list item field */
+li.li-input {
+    height: 40px;
+}
+input.text-item {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    border: 0px;
+    background: rgb(240, 240, 240);
+}
+
+input.text-item:focus {
+    outline-color: #007bff;
+    outline-style: solid;
+    outline-width: 2px;
+    border-radius: 0%;
+}
